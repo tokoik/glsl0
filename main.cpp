@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -16,9 +17,9 @@
 /*
 ** 光源
 */
-static const GLfloat lightpos[] = { 0.0, 0.0, 5.0, 1.0 }; /* 位置　　　 */
-static const GLfloat lightcol[] = { 1.0, 1.0, 1.0, 1.0 }; /* 直接光強度 */
-static const GLfloat lightamb[] = { 0.1, 0.1, 0.1, 1.0 }; /* 環境光強度 */
+static const GLfloat lightpos[] = { 0.0f, 0.0f, 5.0f, 1.0f }; /* 位置　　　 */
+static const GLfloat lightcol[] = { 1.0f, 1.0f, 1.0f, 1.0f }; /* 直接光強度 */
+static const GLfloat lightamb[] = { 0.1f, 0.1f, 0.1f, 1.0f }; /* 環境光強度 */
 
 /*
 ** 初期化
@@ -26,7 +27,7 @@ static const GLfloat lightamb[] = { 0.1, 0.1, 0.1, 1.0 }; /* 環境光強度 */
 static void init(void)
 {
   /* 初期設定 */
-  glClearColor(0.3, 0.3, 1.0, 0.0);
+  glClearColor(0.3f, 0.3f, 1.0f, 0.0f);
   glEnable(GL_DEPTH_TEST);
   glDisable(GL_CULL_FACE);
 
@@ -44,8 +45,8 @@ static void init(void)
 */
 static void scene(void)
 {
-  static const GLfloat diffuse[] = { 0.6, 0.1, 0.1, 1.0 };
-  static const GLfloat specular[] = { 0.3, 0.3, 0.3, 1.0 };
+  static const GLfloat diffuse[] = { 0.6f, 0.1f, 0.1f, 1.0f };
+  static const GLfloat specular[] = { 0.3f, 0.3f, 0.3f, 1.0f };
 
   /* 材質の設定 */
   glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, diffuse);
