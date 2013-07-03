@@ -130,10 +130,12 @@ static void mouse(int button, int state, int x, int y)
     case GLUT_DOWN:
       /* トラックボール開始 */
       trackballStart(x, y);
+      glutIdleFunc(idle);
       break;
     case GLUT_UP:
       /* トラックボール停止 */
       trackballStop(x, y);
+      glutIdleFunc(0);
       break;
     default:
       break;
@@ -173,7 +175,6 @@ int main(int argc, char *argv[])
   glutCreateWindow(argv[0]);
   glutDisplayFunc(display);
   glutReshapeFunc(resize);
-  glutIdleFunc(idle);
   glutMouseFunc(mouse);
   glutMotionFunc(motion);
   glutKeyboardFunc(keyboard);
