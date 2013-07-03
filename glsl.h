@@ -92,6 +92,7 @@ extern PFNGLVERTEXATTRIB4UBVPROC glVertexAttrib4ubv;
 extern PFNGLVERTEXATTRIB4UIVPROC glVertexAttrib4uiv;
 extern PFNGLVERTEXATTRIB4USVPROC glVertexAttrib4usv;
 extern PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
+extern PFNGLACTIVETEXTUREPROC glActiveTexture;
 #endif
 
 extern int glslInit(void);

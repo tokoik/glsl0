@@ -109,6 +109,7 @@ PFNGLVERTEXATTRIB4UBVPROC glVertexAttrib4ubv;
 PFNGLVERTEXATTRIB4UIVPROC glVertexAttrib4uiv;
 PFNGLVERTEXATTRIB4USVPROC glVertexAttrib4usv;
 PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
+PFNGLACTIVETEXTUREPROC glActiveTexture;
 #endif
 
 /*
@@ -215,6 +216,7 @@ int glslInit(void)
   error |= PADDR(PFNGLVERTEXATTRIB4UIVPROC, glVertexAttrib4uiv);
   error |= PADDR(PFNGLVERTEXATTRIB4USVPROC, glVertexAttrib4usv);
   error |= PADDR(PFNGLVERTEXATTRIBPOINTERPROC, glVertexAttribPointer);
+  error |= PADDR(PFNGLACTIVETEXTUREPROC, glActiveTexture);
 
   if (error) fprintf(stderr, "Could not obtain all of entry points.\n");
 #endif
