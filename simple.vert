@@ -4,5 +4,6 @@
 
 void main(void)
 {
-	gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+  // ’¸“_ˆÊ’u
+  gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
 }
