@@ -11,6 +11,8 @@
 //#    pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 #    define _USE_MATH_DEFINES
 #    define _CRT_SECURE_NO_WARNINGS
+#  else
+#    define GL_GLEXT_PROTOTYPES
 #  endif
 #  include <GL/glut.h>
 #  include <GL/glext.h>
