@@ -1,22 +1,11 @@
-﻿#if defined(__APPLE__)
-#  define GL_SILENCE_DEPRECATION
-#  include <GLUT/glut.h>
-#  include <OpenGL/glext.h>
-#else
-#  if defined(_MSC_VER)
-//#    pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
-#    define _USE_MATH_DEFINES
-#    define _CRT_SECURE_NO_WARNINGS
-#  endif
-#  include <GL/glut.h>
-#  include <GL/glext.h>
-#endif
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+﻿/* OpenGL / GLSL 関連の宣言 */
+#include "glsl.h"
 
 /* トラックボール処理用関数の宣言 */
 #include "trackball.h"
+
+/* 標準ライブラリ */
+#include <stdio.h>
 
 /* 1 ならティーポットを描く */
 #define DRAW_TEAPOT 0
@@ -27,7 +16,6 @@
 static const GLfloat lightpos[] = { 0.0f, 0.0f, 5.0f, 1.0f }; /* 位置　　　 */
 static const GLfloat lightcol[] = { 1.0f, 1.0f, 1.0f, 1.0f }; /* 直接光強度 */
 static const GLfloat lightamb[] = { 0.1f, 0.1f, 0.1f, 1.0f }; /* 環境光強度 */
-
 
 /*
 ** 初期化
@@ -53,6 +41,7 @@ static void init()
 */
 static void scene()
 {
+  /* 材質 */
   static const GLfloat diffuse[] = { 0.6f, 0.1f, 0.1f, 1.0f };
   static const GLfloat specular[] = { 0.3f, 0.3f, 0.3f, 1.0f };
 

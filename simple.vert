@@ -4,6 +4,6 @@
 
 void main(void)
 {
-  // í∏ì_à íu
+  // È†ÇÁÇπ‰ΩçÁΩÆ
   gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
 }
