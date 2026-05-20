@@ -7,11 +7,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # ソースファイル
 set(SOURCES
     main.cpp
+    glsl.cpp
     trackball.cpp
 )
 
 # ヘッダファイル
 set(HEADERS
+    glsl.h
     trackball.h
 )
 
