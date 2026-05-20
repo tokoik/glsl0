@@ -1,39 +1,82 @@
-#
-# for Linux
-#
-*.o
-core
+# CMake build directories
+/build/
+/build-*/
+/out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Compiled files (fallback if built in-source)
+/glsl0
+/core
 a.out
-glsl0
-#
-# for Mac
-#
-.DS_Store
-*.xcodeproj/*
-!project.pbxproj
-*.xcuserdatad/
-build/
-DerivedData/
-#
-# for Windows
-#
-Thumbs.db
-*.com
+*.o
+*.obj
 *.exe
 *.dll
-!freeglut.dll
+*.so
+*.dylib
+*.a
 *.lib
-!freeglut.lib
-*.ncb
+*.app
+*.d
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio / Windows
+.vs/
+/[Dd]ebug/
+/[Rr]elease/
+/x64/
+/[Ww][Ii][Nn]32/
+/ipch/
+/packages/
+*.user
+*.userosscache
 *.suo
-*.vcproj.*.*.user
+*.sln.docstates
+*.ncb
 *.sdf
 *.opensdf
-Debug/
-Release/
-ipch/
-#
-# anothre stuff
-#
+*.opendb
+*.VC.opendb
+*.VC.db
+*.aps
+*.msi
+
+# Xcode / Mac
+xcuserdata/
+*.xcworkspace/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+/DerivedData/
+.derived-data-log-*
+
+# Editors and Temp files
+.vscode/
 *~
 *.bak
+*.tmp
+*.swp
+*.orig
+*.rej
+*.bmp
+imgui.ini
