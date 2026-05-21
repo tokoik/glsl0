@@ -2,7 +2,7 @@
 
 // simple.vert
 
-void main(void)
+void main()
 {
   // 頂点位置
   gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
