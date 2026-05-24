@@ -4,6 +4,6 @@
 
 void main()
 {
-  // 頂点位置
-  gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+  // 頂点のクリッピング座標値
+  gl_Position = ftransform();
 }
