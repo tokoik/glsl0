@@ -5,7 +5,7 @@
 #include "trackball.h"
 
 /* 標準ライブラリ */
-#include <stdio.h>
+#include <stdlib.h>
 
 /* 1 ならティーポットを描く */
 #define DRAW_TEAPOT 0
